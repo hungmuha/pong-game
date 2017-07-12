@@ -41,31 +41,31 @@ function init(){ //game board created
 
 function initPaddle(){ //paddle 1 created
 	paddley=boxHeight/2;
-	paddleh=90;
+	paddleh=100;
 	paddlew=10;
 
 }
 
 function initPaddle2(){ //paddle 2 created
 	paddley2=boxHeight/2;
-	paddleh2=90;
+	paddleh2=100;
 	paddlew2=10;
 }
 
 window.addEventListener("keypress",key)
 function key(event){
 	var k = event.keyCode;
-	if (k==108){
+	if (k==108 && paddley+paddleh<boxHeight){
 		paddley+=50;
 	}
-	if (k==111){
+	if (k==111 && paddley>=0){
 		paddley-=50;
 	}
 
-	if (k==97){
+	if (k==97 && paddley2+paddleh2<boxHeight){
 		paddley2+=50;
 	}
-	if (k==113){
+	if (k==113 && paddley2>=0){
 		paddley2-=50;
 	}
 }
@@ -73,14 +73,16 @@ function key(event){
 function draw(){
 	clear();
 	arc(x,y,10);
-	rect(boxWidth-paddlew,paddley,paddlew,paddleh);
-	rect(0,paddley2,paddlew2,paddleh2);
+	var player1= rect(boxWidth-paddlew,paddley,paddlew,paddleh);
+	var player2= rect(0,paddley2,paddlew2,paddleh2);
 
 	if(x+dx<0){
 		if(y>paddley2 && y<paddley2+paddleh2){
 		dx=-dx;
 		}else{
 			console.log("player 1 win");
+			p1Score++;
+			console.log(p1Score);
 			clearInterval(intervalId);
 		}
 	}else if(x+dx>boxWidth){
@@ -88,6 +90,8 @@ function draw(){
 			dx=-dx;
 		}else{
 			console.log("player 2 win");
+			p2Score++;
+			console.log(p2Score);
 			clearInterval(intervalId);
 		}
 	}
