@@ -2,25 +2,33 @@ $(document).ready(function(){
 
 var boxHeight;
 var boxWidth;
+//paddle 1
 var paddley;
 var paddleh;
 var paddlew;
+//paddle 2
+var paddley2;
+var paddleh2;
+var paddlew2;
 var intervalId;
+//var in rect paddle
 var a;
 var b;
 var c;
 var d;
+//var for the ball
 var x=30;
 var y=30;
 var z;
 var dx=3;
 var dy=2;
+//for canvas 
 var canvas;
 var ctx;
 
 
 
-function init(){
+function init(){ //game board created
 	ctx= $("#gameBoard")[0].getContext('2d');
 	boxHeight=$("#gameBoard").height();
 	boxWidth=$("#gameBoard").width();
@@ -28,7 +36,7 @@ function init(){
 	return intervalId
 }
 
-function initPaddle(){
+function initPaddle(){ //paddle created
 	paddley=boxHeight/2;
 	paddleh=50;
 	paddlew=10;
