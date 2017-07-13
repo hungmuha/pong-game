@@ -2,21 +2,22 @@
 <html>
 <head>
 	<link href="css/normalize.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&amp;subset=latin-ext" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
 	<title></title>
 </head>
 <body>
-<nav class="nav">
-<button class="gameButton" id="restart">PLAY AGAIN</button>
-<button class="gameButton" id="clearBoard">START</button>
-</nav>
-<ul id="scoreBoard">
-	<li id="score1">here</li>
-	<li id="score2">here</li>
-</ul>
+	<nav class="nav">
+		<button class="gameButton" id="restart">PLAY AGAIN</button>
+		<button class="gameButton" id="clearBoard">START</button>
+	</nav>
 
-<canvas id="gameBoard" width="500" height="500" style="border: 1px solid black;"></canvas>
 
+<canvas id="gameBoard" width="500" height="500" style="border: 3px solid #E42334;"></canvas>
+	<ul id="scoreBoard">
+		<li id="score2">Player 1</li>
+		<li id="score1">Player 2</li>	
+	</ul>
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="

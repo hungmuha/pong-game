@@ -92,7 +92,7 @@ function draw(){ //function that draw everything in canvas
 
 	if(x+dx<0){
 		if(y>paddley2 && y<paddley2+paddleh2){
-			dy=8*((y-(paddley2+paddleh2)/2)/paddleh2);
+			dy=2*((y-(paddley2+paddleh2)/2)/paddleh2);
 			dx=-dx;
 		}else{
 			console.log("player 1 win");
@@ -102,7 +102,7 @@ function draw(){ //function that draw everything in canvas
 		}
 	}else if(x+dx>boxWidth){
 		if(y>paddley && y<paddley+paddleh){
-			dy=5*((y-(paddley+paddleh)/2)/paddleh);
+			dy=2*((y-(paddley+paddleh)/2)/paddleh);
 			dx=-dx;
 		}else{
 			console.log("player 2 win");
@@ -131,7 +131,7 @@ function arc(x,y,z) { //create the ball
 }
 function rect(a,b,c,d){ //create the paddle
 	ctx.beginPath();
-	ctx.fillStyle="#A2FF23";
+	ctx.fillStyle="#FFF05F";
 	ctx.rect(a,b,c,d);
 	ctx.closePath();
 	ctx.fill();
