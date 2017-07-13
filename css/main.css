@@ -1,3 +1,20 @@
+body{
+	background-image: url(../Images/pong.jpg);
+	background-size: cover;
+}
+#scoreBoard{
+	text-decoration: none;
+	display: inline-block;
+}
+li{
+	list-style: none;
+}
+.gameButton{
+	border-radius: 5px;
+	display: inline-block;
+	text-align: center;
+}
 #gameBoard{
-	margin: 50px 100px;
+	margin-top: 40px;
+	margin-left: 40px;
 }
