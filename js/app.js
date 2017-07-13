@@ -17,11 +17,13 @@ var b;
 var c;
 var d;
 //var for the ball
-var x=200;
-var y=200;
+var x=250;
+var y=250;
 var z;
-var dx=2;
-var dy=1;
+//var dx=2;
+//var dy=2;
+ var dx=Math.ceil(Math.random()*(3));
+ var dy=Math.floor(Math.random()*(3));
 
 //for canvas 
 var canvas;
@@ -51,18 +53,18 @@ function init(){ //game board created
 
 function initPaddle(){ //paddle 1 created
 	paddley=boxHeight/2;
-	paddleh=100;
+	paddleh=125;
 	paddlew=10;
 
 }
 
 function initPaddle2(){ //paddle 2 created
 	paddley2=boxHeight/2;
-	paddleh2=100;
+	paddleh2=125;
 	paddlew2=10;
 }
 
-window.addEventListener("keypress",key)
+window.addEventListener("keypress",key) //keyboard movement function for player 2
 function key(event){
 	var k = event.keyCode;
 	if (k==108 && paddley+paddleh<boxHeight){
@@ -73,7 +75,7 @@ function key(event){
 	}
 }
 
-window.addEventListener("keypress",key2)
+window.addEventListener("keypress",key2) //keyboard movement function function for player 1
 function key2(event){
 	var s = event.keyCode;
 	if (s==97 && paddley2+paddleh2<boxHeight){
@@ -92,7 +94,7 @@ function draw(){ //function that draw everything in canvas
 
 	if(x+dx<0){
 		if(y>paddley2 && y<paddley2+paddleh2){
-			dy=2*((y-(paddley2+paddleh2)/2)/paddleh2);
+			dy=2*((y-(paddley2+paddleh2/2))/paddleh2); //function that change direction and speed of ball when hit paddle
 			dx=-dx;
 		}else{
 			console.log("player 1 win");
@@ -102,7 +104,7 @@ function draw(){ //function that draw everything in canvas
 		}
 	}else if(x+dx>boxWidth){
 		if(y>paddley && y<paddley+paddleh){
-			dy=2*((y-(paddley+paddleh)/2)/paddleh);
+			dy=2*((y-(paddley+paddleh/2))/paddleh); //function that change direction and speed of ball when hit paddle
 			dx=-dx;
 		}else{
 			console.log("player 2 win");
@@ -141,13 +143,13 @@ var clearB=document.getElementById("clearBoard"); //RESET button
 clearB.addEventListener("click",reset);
 
 function reset(){ //reset function that start everything again
-	x=200;
-	y=200;
+	x=250;
+	y=250;
 	paddley=boxHeight/2;
-	paddleh=100;
+	paddleh=125;
 	paddlew=10;
 	paddley2=boxHeight/2;
-	paddleh2=100;
+	paddleh2=125;
 	paddlew2=10;
 	start();
 }

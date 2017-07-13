@@ -6,23 +6,25 @@ body{
 #scoreBoard{
 	display: inline-block;
 }
+#clearBoard{
+	margin-left: 90px;
+}
 .nav{
 	margin-top:30px;
 	margin-left: 150px;
 }
 li{	background-color: #08051A;
 	padding: 5px;
-	font-size: 30px;
-	margin-left:50px;
+	font-size: 25px;
+	margin-left:40px;
 	margin-top: 10px;
 	display:inline-block;
 	color: yellow;
 	list-style: none;
 }
-#score1{
-	margin-left: 120px;
-}
+
 .gameButton{
+	font-size: 25px;
 	font-family: 'Press Start 2P', cursive;
 	border-radius: 5px;
 	display: inline-block;
