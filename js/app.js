@@ -22,9 +22,9 @@ var y=250;
 var z;
 //var dx=2;
 //var dy=2;
- var dx=Math.ceil(Math.random()*(2)+2);
- var dy=Math.floor(Math.random()*(2)+2);
- var time;
+ var dx=Math.ceil(Math.random()*(2-(-2))+2);
+ var dy=Math.floor(Math.random()*(2-(-2))+2);
+ var touch=0;
 
 //for canvas 
 var canvas;
@@ -36,11 +36,19 @@ var p2Score=0;
 //function to time in order to speed up ball
 
 function speed(){
-	time= setInterval(faster,3000);
+	if (touch > 6 && touch%2==0){
+		faster();
+	}
+	if (touch > 6 && touch%2!=0){
+		faster1();
+	}
 }
 function faster(){
 	dx++;
-	dy++;
+}
+
+function faster1(){
+	dx--;
 }
 
 //scoreboard function to show score
@@ -59,7 +67,7 @@ function init(){ //game board created
 	ctx= $("#gameBoard")[0].getContext('2d');
 	boxHeight=$("#gameBoard").height();
 	boxWidth=$("#gameBoard").width();
-	// invervalId= window.requestAnimationFrame(draw); trying out animation
+	// invervalId= window.requestAnimationFrame(draw); //trying out animation
 	intervalId=setInterval(draw,10);
 	return intervalId;
 }
@@ -104,27 +112,32 @@ function draw(){ //function that draw everything in canvas
 	arc(x,y,10);
 	var player1= rect(boxWidth-paddlew,paddley,paddlew,paddleh);
 	var player2= rect(0,paddley2,paddlew2,paddleh2);
-	// speed();
 
 	if(x+dx<0){
 		if(y>paddley2 && y<paddley2+paddleh2){
 			dy=2*((y-(paddley2+paddleh2/2))/paddleh2); //function that change direction and speed of ball when hit paddle
 			dx=-dx;
+			touch++;
+			speed();
 		}else{
 			console.log("player 1 win");
 			p1Score++;
 			scoreB();
 			clearInterval(intervalId);
+			touch=0;
 		}
 	}else if(x+dx>boxWidth){
 		if(y>paddley && y<paddley+paddleh){
 			dy=2*((y-(paddley+paddleh/2))/paddleh); //function that change direction and speed of ball when hit paddle
 			dx=-dx;
+			touch++;
+			speed();
 		}else{
 			console.log("player 2 win");
 			p2Score++;
 			scoreB();
 			clearInterval(intervalId);
+			touch=0;
 		}
 	}
 	if(y+dy>boxHeight||y+dy<0){
@@ -165,6 +178,8 @@ function reset(){ //reset function that start everything again
 	paddley2=boxHeight/2;
 	paddleh2=125;
 	paddlew2=10;
+	dx=Math.ceil(Math.random()*(4-1)+1);
+	dy=Math.floor(Math.random()*(4-1)+1);
 	setTimeout(start,2000);
 }
 
