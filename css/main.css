@@ -41,19 +41,48 @@ li{	background-color: #08051A;
 
 /*landing page css*/
 
+@keyframes fly {
+	0% {position:absolute;
+		top: 20px;
+		left:50px;}
+	25% {position:absolute;
+		top: 500px;
+		left:500px;}
+	50% {position:absolute;
+		top: 30px;
+		left:800px;}
+	100% {position:absolute;
+		top:600px;
+		left:1300px;}
+}
+body{
+	font-family: 'Press Start 2P', cursive;
+}
+.pong{
+	width:30%;
+}
+#ball{
+	z-index: -1;
+	animation-name: fly;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function:ease-out;
+	animation-fill-mode: forwards;
+}
 #landing{
-	width:100%;
-	position:relative;
-	height:100%;
+	background-image: url("../Images/arcade.jpg");
+	background-size: cover;
+
+}
+h1{	z-index: -2;
+	text-align: center;
+	display: block;
+	margin: 0 center;
+	letter-spacing: 20px;
+	font-size: 150px;
+	background: -webkit-linear-gradient( #64B6F3, #65F0FB);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
 }
 
-#landing img{
-	position:absolute;
-	width:100%;
-	z-index: -1;
-	-webkit-transition: opacity 1s ease-in-out;
-	transition: opacity 1s ease-in-out;
-}
-#landing img.transparent {
-	opacity:0;
-}

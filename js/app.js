@@ -36,10 +36,10 @@ var p2Score=0;
 //function to time in order to speed up ball
 
 function speed(){
-	if (touch > 6 && touch%2==0){
+	if (touch > 4 && touch%2==0){
 		faster();
 	}
-	if (touch > 6 && touch%2!=0){
+	if (touch > 4 && touch%2!=0){
 		faster1();
 	}
 }
@@ -201,9 +201,15 @@ function start(){
 	scoreB();
 }
 //for landing page transition
-$("#landing").click(function(){
-	
-	})
+// window.addEventListener("keypress",landingKey)
+// function landingKey(event){
+// 	var change = event.keyCode;
+// 	if(change==87)
+// 		{
+// 		var top = document.getElementById("top");
+// 		top.classList.toggle("transparent");
+// 		}
+// }
 
 
 
