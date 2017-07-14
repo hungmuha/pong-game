@@ -22,8 +22,9 @@ var y=250;
 var z;
 //var dx=2;
 //var dy=2;
- var dx=Math.ceil(Math.random()*(3));
- var dy=Math.floor(Math.random()*(3));
+ var dx=Math.ceil(Math.random()*(2)+2);
+ var dy=Math.floor(Math.random()*(2)+2);
+ var time;
 
 //for canvas 
 var canvas;
@@ -31,6 +32,17 @@ var ctx;
 //players score
 var p1Score=0;
 var p2Score=0;
+
+//function to time in order to speed up ball
+
+function speed(){
+	time= setInterval(faster,3000);
+}
+function faster(){
+	dx++;
+	dy++;
+}
+
 //scoreboard function to show score
 function scoreB(){
 	document.getElementById("score1").textContent=p1Score;
@@ -47,6 +59,7 @@ function init(){ //game board created
 	ctx= $("#gameBoard")[0].getContext('2d');
 	boxHeight=$("#gameBoard").height();
 	boxWidth=$("#gameBoard").width();
+	// invervalId= window.requestAnimationFrame(draw); trying out animation
 	intervalId=setInterval(draw,10);
 	return intervalId;
 }
@@ -91,6 +104,7 @@ function draw(){ //function that draw everything in canvas
 	arc(x,y,10);
 	var player1= rect(boxWidth-paddlew,paddley,paddlew,paddleh);
 	var player2= rect(0,paddley2,paddlew2,paddleh2);
+	// speed();
 
 	if(x+dx<0){
 		if(y>paddley2 && y<paddley2+paddleh2){
@@ -151,7 +165,7 @@ function reset(){ //reset function that start everything again
 	paddley2=boxHeight/2;
 	paddleh2=125;
 	paddlew2=10;
-	start();
+	setTimeout(start,2000);
 }
 
 var playA= document.getElementById("restart"); //START button function tos tart game
@@ -160,7 +174,7 @@ playA.addEventListener("click",restart);
 function restart(){
 	p1Score=0;
 	p2Score=0;
-	reset();
+	setTimeout(reset,2000);
 }
 
 function start(){
