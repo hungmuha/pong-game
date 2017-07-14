@@ -40,29 +40,20 @@ li{	background-color: #08051A;
 }
 
 /*landing page css*/
-@-webkit-keyframes begin{
-	0% {background-image: url(../Images/pacman.gif);
-		background-size: cover;}
-	25% {background-image: url(../Images/pacman.gif);
-		background-size: cover;}
-	50% {background-image: url(../Images/pacman.gif);
-		background-size: cover;}
-	100% {background-image: url(../Images/pacman.gif);
-		background-size: cover;}
-}
-@keyframes begin{
-	0% {background-image: url(../Images/pacman.gif);
-		background-size: cover;}
-	25% {background-image: url(../Images/pacman.gif);
-		background-size: cover;}
-	50% {background-image: url(../Images/pacman.gif);
-		background-size: cover;}
-	100% {background-image: url(../Images/pacman.gif);
-		background-size: cover;}
-}
+
 #landing{
-	background-image: url(../Images/arcade.jpg);
-	background-size: cover;
-	animation: begin 3s steps(17);
-	animation-timing-function: linear;
+	width:100%;
+	position:relative;
+	height:100%;
+}
+
+#landing img{
+	position:absolute;
+	width:100%;
+	z-index: -1;
+	-webkit-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+}
+#landing img.transparent {
+	opacity:0;
 }

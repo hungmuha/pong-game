@@ -200,8 +200,10 @@ function start(){
 	initPaddle2();
 	scoreB();
 }
-
-
+//for landing page transition
+$("#landing").click(function(){
+	
+	})
 
 
 
