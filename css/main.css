@@ -1,3 +1,4 @@
+/*game page css*/
 #gamePage{
 	background-image: url(../Images/pong.jpg);
 	background-size: cover;
@@ -36,4 +37,32 @@ li{	background-color: #08051A;
 	background: -webkit-linear-gradient(left, #0E091F, #2E071A);
 	margin-top: 12px;
 	margin-left: 100px;
+}
+
+/*landing page css*/
+@-webkit-keyframes begin{
+	0% {background-image: url(../Images/pacman.gif);
+		background-size: cover;}
+	25% {background-image: url(../Images/pacman.gif);
+		background-size: cover;}
+	50% {background-image: url(../Images/pacman.gif);
+		background-size: cover;}
+	100% {background-image: url(../Images/pacman.gif);
+		background-size: cover;}
+}
+@keyframes begin{
+	0% {background-image: url(../Images/pacman.gif);
+		background-size: cover;}
+	25% {background-image: url(../Images/pacman.gif);
+		background-size: cover;}
+	50% {background-image: url(../Images/pacman.gif);
+		background-size: cover;}
+	100% {background-image: url(../Images/pacman.gif);
+		background-size: cover;}
+}
+#landing{
+	background-image: url(../Images/arcade.jpg);
+	background-size: cover;
+	animation: begin 3s steps(17);
+	animation-timing-function: linear;
 }
