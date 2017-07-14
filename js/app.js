@@ -45,10 +45,12 @@ function speed(){
 }
 function faster(){
 	dx++;
+	dy--;
 }
 
 function faster1(){
 	dx--;
+	dy++;
 }
 
 //scoreboard function to show score
