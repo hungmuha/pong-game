@@ -1,5 +1,6 @@
 /*game page css*/
 #gamePage{
+	position: relative;
 	background-image: url(../Images/pong.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -39,8 +40,21 @@ li{	background-color: #08051A;
 	margin-left: 100px;
 }
 #instruction{
-	float:right;
-	
+	margin-top: 0;
+	position:absolute;
+	left: 880px;
+	bottom: 280px;
+	background-image: url("../Images/bubble.png");
+	background-repeat: no-repeat;
+	width:100%;
+	height:400px;
+}
+#gameIns{
+	margin-left: 55px;
+	margin-top: 80px;
+}
+#enjoy{
+	margin-left: 130px;
 }
 
 /*landing page css*/
