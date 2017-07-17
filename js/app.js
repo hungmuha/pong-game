@@ -21,8 +21,8 @@ var x=250;
 var y=250;
 var z;
 //direction for the ball
-var dx=Math.ceil(Math.random()*(2-(-2))+2); //random direction for the ball
-var dy=Math.floor(Math.random()*(2-(-2))+2);
+dx=Math.ceil(Math.random()*(4-1)+1); //random direction for the ball
+dy=Math.floor(Math.random()*(4-1)+1);
 var touch=0;   //define touch of the ball in order to start the speeding up the balls based on bounce
 
 //for canvas 
