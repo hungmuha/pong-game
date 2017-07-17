@@ -4,7 +4,7 @@ landing-page-project1 sketch is in the images folder
 
 project1-game sketch is in the images folder
 
-Program note:
+PROGRAM NOTE:
 
 In order to tackle this game, I used canvas as the elements to create this game as pong is a game quite many collision and movement that canvas offer an easier way to deal with this problem. 
 
@@ -14,5 +14,7 @@ The next issue I have to deal with is making sure that as the balls bounce off t
 
 The next addition to this program, the Paddles complicate everything that was going on because now, if the ball hit the paddle it bounce back but if it doesn't hit the paddles instead hit the vertical walls, the game stop. In order to conquer this program, I have to make sure that the ball use the same x and y coordinate as the paddle. As the ball hit within (>) than certain x value of the paddle but smaller than a certain value of the paddle the ball will bounce back. 
 
- 
+The hardest part about this project is probably styling for me.
+
+
 
