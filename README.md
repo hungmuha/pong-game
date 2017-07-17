@@ -15,11 +15,11 @@
 
 ***TECHNOLOGY USED:
 
-- HTML, CSS, Javascript, Jquery (the lazy version of Javascript), Canvas, Some knowledge of Algebra. 
+-HTML, CSS, Javascript, Jquery (the lazy version of Javascript), Canvas, Some knowledge of Algebra. 
 
 ***UNSOLVED PROBLEMS:
 
-- Some perks that I set out to do but didn't get to it like the bonus perks that if someone has won twice in a row would have. 
+-Some perks that I set out to do but didn't get to it like the bonus perks that if someone has won twice in a row would have. 
 
 ***PROGRAM NOTE:
 
@@ -44,6 +44,8 @@
 -My strength is within the realm of Javascript and anything that is Math/logic related. 
 
 -My weakness is definitely styling as sometime I don't know what is going on with CSS, and the problem is not so inherent and require a lot of back tracking and guessing until the problem is solved. But getting better at it is always possible because anything is only as good as it is perceived
+
+-I ended up not liking my original wireframes as defined and I went with the new idea to keep it cool and original at the sametime show case my ability to showcase some animation on the landing page.
 
 
 

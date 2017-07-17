@@ -20,11 +20,10 @@ var d;
 var x=250;
 var y=250;
 var z;
-//var dx=2;
-//var dy=2;
- var dx=Math.ceil(Math.random()*(2-(-2))+2);
- var dy=Math.floor(Math.random()*(2-(-2))+2);
- var touch=0;
+//direction for the ball
+var dx=Math.ceil(Math.random()*(2-(-2))+2); //random direction for the ball
+var dy=Math.floor(Math.random()*(2-(-2))+2);
+var touch=0;   //define touch of the ball in order to start the speeding up the balls based on bounce
 
 //for canvas 
 var canvas;
@@ -34,7 +33,6 @@ var p1Score=0;
 var p2Score=0;
 
 //function to time in order to speed up ball
-
 function speed(){
 	if (touch > 4 && touch%2==0){
 		faster();
@@ -58,10 +56,10 @@ function scoreB(){
 	document.getElementById("score1").textContent=p1Score;
 	document.getElementById("score2").textContent=p2Score;
 	if(p1Score==3){
-		alert ("player 1 win the game");
+		alert ("player 1 win the game!!! Select 'Again' to play again");
 	}
 	if(p2Score==3){
-		alert ("player 2 win the game");
+		alert ("player 2 win the game!!! Select 'Again' to play again");
 	}
 }
 
@@ -117,7 +115,7 @@ function draw(){ //function that draw everything in canvas
 
 	if(x+dx<0){
 		if(y>paddley2 && y<paddley2+paddleh2){
-			dy=2*((y-(paddley2+paddleh2/2))/paddleh2); //function that change direction and speed of ball when hit paddle
+			dy=2*((y-(paddley2+paddleh2/2))/paddleh2); //function that change direction of ball when hit paddle
 			dx=-dx;
 			touch++;
 			speed();
@@ -130,7 +128,7 @@ function draw(){ //function that draw everything in canvas
 		}
 	}else if(x+dx>boxWidth){
 		if(y>paddley && y<paddley+paddleh){
-			dy=2*((y-(paddley+paddleh/2))/paddleh); //function that change direction and speed of ball when hit paddle
+			dy=2*((y-(paddley+paddleh/2))/paddleh); //function that change direction of ball when hit paddle
 			dx=-dx;
 			touch++;
 			speed();
@@ -174,13 +172,13 @@ clearB.addEventListener("click",reset);
 function reset(){ //reset function that start everything again
 	x=250;
 	y=250;
-	paddley=boxHeight/2;
+	paddley=boxHeight/2;  //reset the position of the ball
 	paddleh=125;
 	paddlew=10;
 	paddley2=boxHeight/2;
 	paddleh2=125;
 	paddlew2=10;
-	dx=Math.ceil(Math.random()*(4-1)+1);
+	dx=Math.ceil(Math.random()*(4-1)+1); //random direction for the ball
 	dy=Math.floor(Math.random()*(4-1)+1);
 	setTimeout(start,2000);
 }
@@ -200,17 +198,6 @@ function start(){
 	initPaddle2();
 	scoreB();
 }
-//for landing page transition
-// window.addEventListener("keypress",landingKey)
-// function landingKey(event){
-// 	var change = event.keyCode;
-// 	if(change==87)
-// 		{
-// 		var top = document.getElementById("top");
-// 		top.classList.toggle("transparent");
-// 		}
-// }
-
 
 
 })
