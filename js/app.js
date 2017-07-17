@@ -18,7 +18,7 @@ var c;
 var d;
 //var for the ball
 var x=250;
-var y=250;
+var y=150;
 var z;
 //direction for the ball
 dx=Math.ceil(Math.random()*(4-1)+1); //random direction for the ball
@@ -171,7 +171,7 @@ clearB.addEventListener("click",reset);
 
 function reset(){ //reset function that start everything again
 	x=250;
-	y=250;
+	y=150;
 	paddley=boxHeight/2;  //reset the position of the ball
 	paddleh=125;
 	paddlew=10;
