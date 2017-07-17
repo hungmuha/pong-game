@@ -178,7 +178,7 @@ function reset(){ //reset function that start everything again
 	paddley2=boxHeight/2;
 	paddleh2=125;
 	paddlew2=10;
-	dx=Math.ceil(Math.random()*(4-1)+1); //random direction for the ball
+	dx=Math.ceil(Math.random()*(4-1)+1); 
 	dy=Math.floor(Math.random()*(4-1)+1);
 	setTimeout(start,2000);
 }
@@ -190,6 +190,11 @@ function restart(){
 	p1Score=0;
 	p2Score=0;
 	setTimeout(reset,2000);
+}
+
+document.addEventListener("click", gamePage);
+function gamePage(){
+	window.location.assign("game.html");
 }
 
 function start(){
