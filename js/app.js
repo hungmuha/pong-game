@@ -85,7 +85,7 @@ function initPaddle2(){ //paddle 2 created
 	paddlew2=10;
 }
 
-window.addEventListener("keypress",key) //keyboard movement function for player 2
+window.addEventListener("keypress",key); //keyboard movement function for player 2
 function key(event){
 	var k = event.keyCode;
 	if (k==108 && paddley+paddleh<boxHeight){
@@ -96,7 +96,7 @@ function key(event){
 	}
 }
 
-window.addEventListener("keypress",key2) //keyboard movement function function for player 1
+window.addEventListener("keypress",key2); //keyboard movement function function for player 1
 function key2(event){
 	var s = event.keyCode;
 	if (s==97 && paddley2+paddleh2<boxHeight){
@@ -186,17 +186,12 @@ function reset(){ //reset function that start everything again
 var playA= document.getElementById("restart"); //START button function tos tart game
 playA.addEventListener("click",restart);
 
+//start function activated when user click the START button
 function restart(){
 	p1Score=0;
 	p2Score=0;
 	setTimeout(reset,2000);
 }
-
-document.addEventListener("click", gamePage);
-function gamePage(){
-	window.location.assign("game.html");
-}
-
 function start(){
 	init();
 	initPaddle();
