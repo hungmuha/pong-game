@@ -6,9 +6,10 @@
 	<link href="css/main.css" rel="stylesheet">
 	<title>Best Pong game ever</title>
 </head>
-<body id="gamePage">
-	<div id="instruction">
-		<p id="gameIns">Game Instructions
+<body class="gamePage">
+	<div class="instruction">
+	<!-- bubble with instruction of the game  -->
+		<p class="gameIns">Game Instructions
 			<br/>Use A,Q to move left.
 			<br/>paddle. Use O,L to
 			<br/>move right paddle.
@@ -20,17 +21,20 @@
 			<br/>play again
 			<br/>BE READY!
 		</p>
-		<p id="enjoy">ENJOY!!!</p>
+		<p class="enjoy">ENJOY!!!</p>
 
 	</div>
 	<nav class="nav">
+	<!-- the 2 buttons that use to navigate the game -->
 		<button class="gameButton" id="restart">AGAIN</button>
 		<button class="gameButton" id="clearBoard">START</button>
 	</nav>
 
 
-<canvas id="gameBoard" width="500" height="500" style="border: 3px solid #E42334;"></canvas>
+<canvas id="gameBoard" width="500" height="500"></canvas>
+<!-- game board where all the activity regard to playing happening -->
 	<ul id="scoreBoard">
+		<!-- bottom list that show score of the game -->
 		<li>Player 1</li>
 		<li id="score2"></li>
 		<li>Player 2</li>

@@ -1,5 +1,5 @@
 /*game page css*/
-#gamePage{
+.gamePage{
 	position: relative;
 	background-image: url(../Images/pong.jpg);
 	background-size: cover;
@@ -38,8 +38,9 @@ li{	background-color: #08051A;
 	background: -webkit-linear-gradient(left, #0E091F, #2E071A);
 	margin-top: 12px;
 	margin-left: 100px;
+	border: 3px solid #E42334;
 }
-#instruction{
+.instruction{
 	margin-top: 0;
 	position:absolute;
 	left: 880px;
@@ -49,11 +50,11 @@ li{	background-color: #08051A;
 	width:100%;
 	height:400px;
 }
-#gameIns{
+.gameIns{
 	margin-left: 55px;
 	margin-top: 80px;
 }
-#enjoy{
+.enjoy{
 	margin-left: 130px;
 }
 
@@ -79,7 +80,7 @@ body{
 .pong{
 	width:30%;
 }
-#ball{
+.ball{
 	z-index: -1;
 	animation-name: fly;
 	animation-duration: 3s;
@@ -87,7 +88,7 @@ body{
 	animation-timing-function:ease-out;
 	animation-fill-mode: forwards;
 }
-#landing{
+.landing{
 	background-image: url("../Images/arcade.jpg");
 	background-size: cover;
 
